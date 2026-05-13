@@ -2,7 +2,6 @@ import logging
 import tkinter as tk
 from tkinter import messagebox
 from urllib.parse import urlparse
-
 import qrcode
 from qrcode.constants import ERROR_CORRECT_L
 from PIL import Image, ImageTk
@@ -91,10 +90,6 @@ def generate_qr_code(
     save_image(image, output_path)
     return image
 
-
- 
-# Best Practice #5 — Avoid mixing technologies
-# All GUI code is isolated here; QR logic above has zero tkinter imports.
  
 def build_gui_window(title: str) -> tk.Tk:
     """
@@ -151,9 +146,6 @@ def display_qr_in_gui(
     attach_image_label(frame, image)
     root.mainloop()
 
-
- 
-# Entry point — Best Practice #2 (no globals) and #6 (one task: orchestrate)
  
 def main() -> None:
     """
