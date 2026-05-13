@@ -1,0 +1,7 @@
+
+# Install all dependencies with:
+#   pip install -r requirements.txt
+
+qrcode[pil]==8.0.0   # QR code generation
+Pillow==11.2.1        # Image rendering and file I/O (pulled in by qrcode[pil])
+
